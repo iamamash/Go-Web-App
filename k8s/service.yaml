@@ -1,12 +1,16 @@
+# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-service
+  name: go-web-app
+  namespace: ingress-nginx
+  labels:
+    app: go-web-app
 spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
   selector:
     app: go-web-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
-  type: NodePort
+  type: ClusterIP
