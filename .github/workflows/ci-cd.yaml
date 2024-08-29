@@ -4,13 +4,12 @@ name: CI/CD
 
 # Exclude the workflow to run on changes to the helm chart
 on:
-  # push:
-  #   branches:
-  #     - main
-  #   paths-ignore:
-  #     - 'helm/**'
-  #     - 'k8s/**'
-  #     - 'README.md'
+   push:
+     branches:
+       - main
+     paths-ignore:
+       - 'helm/**'
+       - 'README.md'
 
 jobs:
 
@@ -87,9 +86,9 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email "abhishek@gmail.com"
-        git config --global user.name "Abhishek Veeramalla"
+        git config --global user.email "ansari2002ksp@gmail.com"
+        git config --global user.name "Amash Ansari"
         git add helm/go-web-app-chart/values.yaml
-        git commit -m "Update tag in Helm chart"
+        git commit -m "Updated tag in Helm chart"
         git push
 
