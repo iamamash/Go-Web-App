@@ -8,7 +8,7 @@ image:
   repository: iamamash/Go-Web-App
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10620813068"
+  tag: "10620892258"
 
 ingress:
   enabled: false
